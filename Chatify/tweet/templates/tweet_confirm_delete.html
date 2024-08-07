@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Chat with Chatify
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4">Welcome to Chat with Chatify</h1>
+<form method="post">
+    <h2 class="text-center mt-4">Are you sure you want to delete this tweet?</h2>
+    {% csrf_token %}
+    <button class="btn btn-danger">Delete</button>
+    <a href="{% url 'tweet_list' %}" class="btn btn-primary">Cancel</a>
+</form>
+{% endblock %}
